@@ -1,0 +1,44 @@
+/*------------------------------------------------------------------PaginaCreeazaGrup---------------------------*/
+.paginaCreareGrup {
+    padding: 100px;
+    align-items:baseline;
+    display: flex;
+    flex-direction:column;
+    background-color:rgb(43,49,70);
+    height: 600px;
+}
+
+.paginaCreareGrup input {
+    position: relative;
+    top:100px;
+    left:90px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    background-color: rgb(227,219,215);
+    border-radius: 0.3em;
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+
+/* Stilizare pentru butoane */
+#adaugaMembri,#creeazaGrup {
+    position: relative;
+    background: none;
+    display: block;
+    top:100px;
+    left:525px;
+    border: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    color: rgb(227,219,215);
+
+}
+
+
+button:hover {
+    color: white;
+}

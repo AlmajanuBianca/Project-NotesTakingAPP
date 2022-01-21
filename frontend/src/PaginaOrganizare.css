@@ -1,0 +1,108 @@
+/*--------------------------------------------------------------------------IMPARTIREA COMPONENTELOR--------------*/
+/* Imparte in pagina cele 2 componente : ListaNotite si Notita */
+.PaginaOrganizare {
+    display: flex;
+  }
+  .PaginaGrup {
+    display: flex;
+  }
+  
+  /*-----------------------------------------------------------------------------STANGA------------------------------*/
+  /* Separatorul din partea stanga */
+  .partea-stanga {
+    /* Am pus 30% din pagina */
+    width: 30%;
+    /* Si inaltimea paginii*/
+    height: 100vh;
+    /* Aici e dunga aia de culoare albastru inchis */
+    border-right: 2px solid navy;
+  }
+  /*------------------------------------------------------------------STANGA-ACASA---------------------------*/
+  .partea-stanga-acasa {
+    background-color: navy;
+    padding: 25px;
+  }
+  /*-----------------------------------------------------------------------------STANGA-LISTA-NOTITE----------------*/
+  /* Zona de header = Titlul si butonul de adaugare de notite */
+  .partea-stanga-header {
+    /* Pune elementele din div pe aceeasi linie pe orizontala */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Separa elementele din div, le pune la capetele div-ului */
+    border-top: 2px solid navy;
+  }
+  /* Stilizarea pentru zona de notite */
+  .partea-stanga-lista-notite {
+    height: calc(100vh - 155px);
+    overflow-y: scroll;
+  }
+  /* Stilizarea pentru fiecare notita in parte */
+  .partea-stanga-lista-notita {
+    padding: 5px;
+  }
+  /* Stilizarea pentru titlu si butonul de stergere */
+  .partea-stanga-notita-titlu {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Zona de previzualizare a notitei */
+  .partea-stanga-notita p {
+    margin: 10px 0;
+  }
+  /* Zona de previzualizare a notitei */
+  .partea-stanga-notita-modificari {
+    display: block;
+    color: gray;
+  }
+  /* In momentul in care se selecteaza o notita, se schimba fontul si culoarea literelor */
+  .partea-stanga-lista-notita.editare {
+    background: navy;
+    color: white;
+  }
+  /*------------------------------------------------------------------------------------------DREAPTA------------*/
+  /* Stilizarea pentru notita */
+  .notita {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* Impartirea aproximativ fifty-fifty in pagina a zonei de editare si previzualizare */
+  /*------------------------------------------------------------------------------NICIO-NOTITA-SELECTATA-------------*/
+  .nimic-de-vizualizat {
+    width: 70%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: grey;
+  }
+  /*------------------------------------------------------------------------------------------VIZUALIZAREA--------*/
+  .notita-inputuri {
+    height: 35px;
+    padding: 10px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .notita-inputuri input{
+    width: 250px;
+  }
+  .notita-vizualizare {
+    width: 100% !important;
+    height: 100vh;
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.02);
+  }
+  .notita-vizualizare-titlu {
+    padding: 20px 20px;
+    margin: 0;
+  }
+  .notita-vizualizare-markdown {
+    padding: 0 5px 10px 20px;
+    font-size: 1rem;
+    line-height: 2rem;
+  }

@@ -1,0 +1,35 @@
+
+---------------------------------- user
+{
+    "idUser": "user1",
+    "email": "bianca@stud.ase.ro",
+    "parola": "tw",
+    "facultate": "CSIE"
+}
+
+------------------------------ notita
+{
+    "idNotita": "notita1user1",
+    "idUser": "user1",
+    "text": "cred ca merge",
+    "tipActivitate": "Curs",
+    "numeCurs": "TW"
+}
+
+----------------------------- grup
+{
+    "nume": "grup1",
+    "idCreator": "user1"
+}
+
+----------------------------- membruGrup
+{
+    "idUser": "user1",
+    "idGrup": 1
+}
+
+---------------------------- notitaGrup
+{
+    "idNotita": "notita1user1",
+    "idGrup": 1
+}

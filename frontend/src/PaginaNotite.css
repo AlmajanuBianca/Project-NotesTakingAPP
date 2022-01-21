@@ -1,0 +1,199 @@
+/*-------------------------------------------------------------------------------BUTON----------------------------*/
+/* Stilizarea butoanelor din pagina */
+button {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    color: rgb(204, 0, 170);
+  }
+  button:hover {
+    color: #04c;
+  }
+  
+  /*--------------------------------------------------------------------------IMPARTIREA COMPONENTELOR--------------*/
+  /* Imparte in pagina cele 2 componente : ListaNotite si Notita */
+  .PaginaNotite {
+    display:-webkit-box;
+    flex-direction:row;
+    overflow: auto;
+    
+  }
+  
+  /*-----------------------------------------------------------------------------STANGA------------------------------*/
+  /* Separatorul din partea stanga */
+  .partea-stanga {
+    /* Am pus 30% din pagina */
+    width: 30%;
+    /* Si inaltimea paginii*/
+    height: 100vh;
+    /* Aici e dunga aia de culoare albastru inchis */
+    border-right: 2px solid rgb(43,49,70) !important;
+  }
+  /*------------------------------------------------------------------STANGA-ACASA---------------------------*/
+  .partea-stanga-acasa {
+    background-color: rgb(43,49,70)!important;
+    padding: 25px;
+    border:0px;
+  }
+  /*-----------------------------------------------------------------------------STANGA-LISTA-NOTITE----------------*/
+  /* Zona de header = Titlul si butonul de adaugare de notite */
+  .partea-stanga-header {
+    /* Pune elementele din div pe aceeasi linie pe orizontala */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Separa elementele din div, le pune la capetele div-ului */
+    border-top: 2px solid rgb(165,153,155);
+  }
+  /* Stilizarea pentru zona de notite */
+  .partea-stanga-lista-notite {
+    height: calc(100vh - 155px);
+    overflow-y: scroll;
+    
+  }
+  /* Stilizarea pentru fiecare notita in parte */
+  .partea-stanga-lista-notita {
+    padding: 5px;
+  }
+  /* Stilizarea pentru titlu si butonul de stergere */
+  .partea-stanga-notita-titlu {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Zona de previzualizare a notitei */
+  .partea-stanga-notita p {
+    margin: 10px 0;
+  
+  }
+  /* Zona de previzualizare a notitei */
+  .partea-stanga-notita-modificari {
+    display: block;
+    color: gray;
+  }
+  /* Cand treci cu mouse-ul peste o notita din lista sa se schimbe culoarea */
+  .partea-stanga-notita:hover {
+    background: gainsboro;
+  }
+  /* In momentul in care se selecteaza o notita, se schimba fontul si culoarea literelor */
+  .partea-stanga-lista-notita.editare {
+    background: rgb(165,153,155) !important;
+    color: white;
+  }
+  /*------------------------------------------------------------------------------------------DREAPTA------------*/
+  /* Stilizarea pentru notita */
+  .notita {
+    width: 70%;
+    height: 100vh;
+  }
+  /* Impartirea aproximativ fifty-fifty in pagina a zonei de editare si previzualizare */
+  .notita-editare,
+  .notita-previzualizare {
+    height: 48vh;
+  }
+  /*------------------------------------------------------------------------------------------EDITAREA---------------*/
+  /* Stilizarea pentru editarea de notite */
+  .notita-editare {
+    margin-top: 10px;
+    padding: 2px;
+  }
+  /* Stilizarea pentru zona de text si de calupul de input-uri */
+  .notita-editare textarea{
+    display: block;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    width: 100% !important;
+    height: calc(50vh - 70px) !important;
+    padding: 0px;
+    resize: none;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+    #box{
+    display: block;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    width: 20%;
+    height: calc(50vh - 70px);
+    padding: 0px;
+    resize: none;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  .notita-editare-inputuri {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    height: calc(50vh - 70px);
+    padding: 0px;
+    resize: none;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  /* Stilizarea pentru div-ul in care se afla cele 3 inputuri : text, tip de activitate si materie */
+  .notita-editare-inputuri {
+    height: 40px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  /* Stilizarea pentru cele 3 inputuri : text, tip de activitate si materie */
+  .notita-editare-inputuri input{
+    width: 250px;
+  }
+  /* Zona de previzualizare ca sa aibe scroll si altele */
+  .notita-previzualizare {
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+
+  }
+  /* Centrarea si infrumusetarea titlului notitei */
+  .notita-previzualizare-titlu {
+    padding: 0px 10px 0 10px;
+    margin: 0;
+  }
+  /* Stilizarea zonei de text a previzualizarii */
+  .notita-previzualizare-markdown {
+    padding: 0 10px 10px 10px;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  /*------------------------------------------------------------------------------NICIO-NOTITA-SELECTATA-------------*/
+  .nimic-de-vizualizat {
+    width: 70%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: grey;
+    
+  }
+  /*------------------------------------------------------------------------------------------VIZUALIZAREA--------*/
+  .notita-vizualizare {
+    width: 70%;
+    height: 100vh;
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+    background: rgb(165,153,155);
+  }
+  .notita-vizualizare-titlu {
+    padding: 20px 20px;
+    margin: 0;
+  }
+  .notita-vizualizare-markdown {
+    padding: 0 5px 10px 20px;
+    font-size: 1rem;
+    line-height: 2rem;
+    max-width: 65%;
+  }
+  /* .textSiPoza{
+    display: flex;
+  } */
+
+  

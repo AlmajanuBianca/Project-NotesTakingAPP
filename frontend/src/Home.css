@@ -1,0 +1,61 @@
+
+#home{
+    display: flex;
+    height: 700px;
+    background-color: rgb(227,219,215);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#dashboard{
+    background-color: rgb(43,49,70);
+    color: gray;
+    width: 15%;
+    height: 100%;
+    font-size: 12px;
+
+  
+}
+#account{
+    width: 20%;
+}
+#utilizator{
+    font-size: 10px;
+    background-color: rgb(43,49,70);
+    color:gray;
+    width: 70%;
+    border:none;
+}
+
+#continut{
+    width: 85%;
+    float: left;
+
+}
+#logout{
+    float: right;
+}
+
+.tbRow{
+    color:white;
+    background-color: rgb(40, 40, 40);
+}
+
+#td{
+    color:white;
+}
+label{
+    font-size: 13px;
+}
+
+#lupa{
+    float:right;
+}
+#tableContainer{
+    width: 93%;
+    position: relative;
+    left:31px;
+}
+
+#cuvCheie, #materieCautare,#zi,#luna,#an{
+    width: 90%;
+}
