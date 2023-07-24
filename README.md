@@ -1,53 +1,61 @@
-# Proiect-TW-CODEX-Almajanu-Azzano
+# Project-NotesTakingAPP
 
+Used:
+-> vscode
+-> backend: nodejs, javascript
+-> frontend: react, html, css
+-> database: mariadb
+
+Functions:
 --------------------------------------------- SIGN IN
--> Verifica daca ambele campuri corespunzatoare email-ului si parolei sunt completate + ALERTA
--> Verifica existenta contului in baza de date + ALERTA
--> Stocheaza cateva date despre utilizator in localStorage
+-> Check if both fields corresponding to email and password are filled in + ALERT if not
+-> Check the existence of the account in the database + ALERT if it does not exist
+-> Store data about the user in localStorage
 
 
 --------------------------------------------- SIGN UP
--> Verifica daca toate campurile sunt completate + ALERTA
--> Verifica daca email-ul este scris corespunzator cu @stud.ase.ro + ALERTA
--> Verifica unicitatea email-ului in baza de date + ALERTA
--> Creeaza un user in baza de date
--> Stocheaza cateva date despre utilizator in localStorage
+-> Check if all fields are completed + ALERT if not
+-> Check if the email is written properly with @stud.ase.ro + ALERT if not
+-> Check the uniqueness of the email in the database + ALERT if email repeats itself
+-> Create a user in the database
+-> Store data about the user in localStorage
 
 
---------------------------------------------- PAGINA PRINCIPALA
--> Afiseaza email-ul userului in coltul din stanga sus 
--> Userul poate accesa lista sa de notite
--> Userul poate crea un grup si adauga colegi in grupul sau
--> Userul poate filtra notitele avute (dupa tag (tipul activitatii curs/seminar), dupa cuvintele cheie din corpul notitei, dupa materie, dupa data la care a fost creata notita, conditiile de filtrare aplicandu-se simultan) putand apoi sa vizualizeze notitele obtinute in urma filtrarii. In cazul in care nicio notita nu corespunde conditiilor impuse de user, i se va afisa lista integrala de notite
--> Afiseaza grupurile din care userului face parte cu 3 optiuni (parasirea grupului, adaugarea de noi membrii si vizualizarea notitelor aferente grupului respectiv)
--> Parasirea implica 1 verificare : daca utilizatorul este administratorul grupului respectiv, atunci iesirea sa din grup inseamna stergerea definitiva a grupului odata cu eliminarea tuturor membrilor si notitelor, dar daca este doar un simplu membru, atunci nu afecteaza grupul cu nimic
--> Adaugarea de noi membri se poate face doar de catre administratorul grupului respectiv
--> Notitele vizualizate sunt toate notitele care au fost partajate cu grupul de oricare dintre membrii sai
--> Userul poate sa se delogheze din coltul din dreapta sus
+--------------------------------------------- MAIN PAGE
+-> Displays the user's email in the upper left corner
+-> The user can access his list of notes
+-> The user can create a study group and add colleagues to his group
+-> The user can filter the notes (by tag (type of course/seminar activity), by keywords in the body of the note, by subject, by the date the note was created, the filtering conditions being applied simultaneously) and then is able to view the notes obtained after filtering. If no note meets the conditions imposed by the user, the full list of notes will be displayed
+-> Shows the study groups the user belongs to with 3 options (leaving the study group, adding new members and viewing notes related to the respective group)
+-> Leaving involves 1 check: if the user is the administrator of the respective study group, then his exit means the definitive deletion of the study group along with the elimination of all members and notes, but if he is just a simple member, then it does not affect the study group in any way
+-> Adding new members can only be done by the administrator of the respective study group
+-> Viewed notes are all notes that have been shared with the study group by any of its members
+-> The user can log out from the upper right corner
 
 
---------------------------------------------- PAGINA DE NOTITE
--> Userul poate adauga notite noi in lista, care se vor salva automat in baza de date
--> Userul isi poate vizualiza lista integrala de notite atat in modul de previzualizare care este de tip react markdown cat si in modul de editare
--> Modul de editare presupune editarea textului notitei, a titlului, a tipului de activitate curs/seminar si a materiei actualizandu-se automat atat in markdown (jos in previzualizare) cat si in lista. In momentul in care userul da click pe butonul de salvare, toate modificarile se salveaza automat in baza de date modificandu-si si data cu data ultimei modificari + ALERT LA SALVARE
--> Userul is poate sterge notitele, acestea disparand si din lista dar si din baza de date
--> Userul are posibilitatea de a integra continut din alte surse pentru a-si lua notite cum ar fi accesarea unui link de youtube, videoclipul aparand in jumatatea de jos a paginii si corpul notitei in jumatatea de sus, notita salvandu-se automat
--> Userul are optiunea de a adauga din atasamente cu ar fi adaugarea dintr-un pdf (avand pdf-ul in dreapta, iar corpul notitei in stanga, aceasta salvandu-se automat)
+--------------------------------------------- THE NOTES TAKING PAGE
+-> The user can add new notes to his notes list, which will be automatically saved in the database
+-> The user can view his entire list of notes both in the preview mode, which is of the react markdown type, and also in the editing mode
+-> The editing mode involves editing the text of the note, the title, the type of course/seminar activity and the subject automatically updating both in markdown (down in the preview) and in the list. When the user clicks on the save button, all changes are automatically saved in the database, changing the date with the date of the last change + SAVE ALERT
+-> The user can delete his notes, they disappear both from the list and from the database
+-> The user has the possibility to integrate content from other sources to take notes, such as accessing a YouTube link, the video appearing in the lower half of the page and the body of the note in the upper half, the note being saved automatically
+-> The user has the option to add attachments, such as adding from a pdf (having the pdf on the right, and the body of the note on the left, this being saved automatically)
 
 
---------------------------------------------- CREEAZA GRUP
--> Verifica daca toate campurile sunt completate + ALERTA
--> Verifica daca email-urile introduse : exista in baza de date, nu se repeta si niciunul dintre ele nu este email-ul userului care creeaza grupul + ALERTE
--> Minim un coleg trebuie adaugat in grup, iar userul care creeaza grupul este adaugat automat ca administrator (doar el putand adauga alte persoane utlerior si daca paraseste grupul, aceste se sterge cu totul)
--> Odata creat grupul, ne intoarce la pagina principala unde il vom putea vedea in lista de grupuri
-
---------------------------------------------- FILTRAREA
--> Verifica daca au fost selectate conditii de filtrare, daca nu afiseaza lista integrala, iar daca au fost selectate, atunci le aplica simultan afisand rezultatul selectiei. Daca exista notite care corespund, le afiseaza pe acelea, daca nu, atunci afiseaza lista integrala
--> Cand se afiseaza lista de notite organizate, utilizatorul are optiunea de a vizualiza notita in modul de markdown
--> Utilizatorul poate incarca notita intr-un grup introducand ID-ul grupului care apare si in pagina principala. Presupune 3 verificari : grupul sa existe in baza de date, utilizatorul sa faca parte din grup si notita pe care vrea sa o adauge in grup sa nu fi fost deja adaugata (deoarece orice notita din grup se modifica automat in momenntul in care utilizatorul careia ii apartine o editeaza).
--> Utilizatorul are optiunea de a partaja notita unui coleg introducandu-i email-ul. Presupune crearea unei noi notite cu un ID nou si cu ID-ul userului corespunzator email-ului introdus atfel incat modificarile aduse de un user sa nu afecteze notita celuilalt user + 2 verificari : email-ul sa existe in baza de date, sa nu fie al utilizatorului curent
+--------------------------------------------- CREATE A STUDY GROUP
+-> Check if all required fields are completed + ALERT
+-> Check if the emails entered: exist in the database, are not repeated and none of them are the email of the user who created the study group + ALERTS
+-> At least one colleague must be added to the group, and the user who creates the group is automatically added as an administrator (only he can add other people and if he leaves the study group, the study group itself is deleted)
+-> Once the study group is created, it returns to the main page where the user can see it in the list of study groups
 
 
---------------------------------------------- VIZUALIZAREA NOTITELOR DIN GRUP
--> Orice membru poate vizualiza notitele din grupul din care face parte
--> Doar membrul care a adaugat notita o poate sterge, ceilalti nu au dreptul de a face asa ceva 
+--------------------------------------------- THE FILTERING PROCESS
+-> Checks if filter conditions have been selected then applies them simultaneously displaying the selection result. If there are notes that correspond, it displays those, if not, then it displays the full list
+-> When the list of organized notes is displayed, the user has the option to view the note in markdown mode
+-> The user can upload the note to a study group by entering the study group ID that also appears on the main page. It requires 3 checks: the study group must exist in the database, the user must be part of the study group and the note he wants to add to the study group must not have already been added (because any note in the group is automatically modified the moment the user to whom it belongs edits it).
+-> The user has the option to share the note with a colleague by entering his email. This process involves the creation of a new note with a new ID and the user ID corresponding to the email of the colleague so that the changes made by one user do not affect the note of the other user + 2 checks: the email must exist in the database, it must not belong to the current user
+
+
+--------------------------------------------- THE NOTES IN THE STUDY GROUP
+-> Any member can view the notes from the study group he belongs to
+-> Only the member who added the note can delete it
